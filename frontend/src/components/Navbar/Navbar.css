@@ -1,0 +1,60 @@
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    color: #fff;
+    background-color: #000;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 6rem;
+    transition: all 400ms ease-in-out;
+}
+
+.nav-child {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-child h2 {
+    margin: 0;
+}
+
+.nav-child .item-count {
+    position: fixed;
+    top: 0;
+    right: .2rem;
+    background-color: red;
+    padding: .2rem .4rem;
+    border-radius: 50%;
+}
+
+.nav-child i {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-child a:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shrink-nav {
+    background-color: #fff;
+    height: auto;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+}
+
+.shrink-nav a {
+    color: #000;
+}

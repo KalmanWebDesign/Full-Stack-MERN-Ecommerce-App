@@ -1,0 +1,16 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  html {
+      font-size: 75%;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+      font-size: 55%;
+  }
+}

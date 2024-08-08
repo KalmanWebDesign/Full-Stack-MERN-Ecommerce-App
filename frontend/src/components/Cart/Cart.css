@@ -1,0 +1,30 @@
+.cart-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 8rem 3rem 3rem 3rem;
+    max-width: 80rem;
+    margin: auto;
+}
+
+.cart-section h1,
+.cart-section a {
+    text-align: left;
+}
+
+.cart-section a {
+    width: 20%;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    margin: 2rem 0;
+}
+
+@media (max-width: 767px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+}
