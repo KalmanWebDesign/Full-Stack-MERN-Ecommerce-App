@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import {Routes, Route, BrowserRouter} from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Cart from './components/Cart/Cart';
 import Navbar from './components/Navbar/Navbar';
@@ -22,7 +22,7 @@ function App() {
       alert("Item is already in your cart")
     } else {
       alert("Item added to cart")
-      setCart([...cart, {...product, qty: 1}])
+      setCart([...cart, { ...product, qty: 1 }])
     }
   }
 
@@ -36,25 +36,19 @@ function App() {
 
   const handleQuantityChange = (productId, newQuantity) => {
     setCart(prevCart => prevCart.map(item =>
-      item._id === productId ? {...item, qty: newQuantity} : item
+      item._id === productId ? { ...item, qty: newQuantity } : item
     ))
   }
 
   return (
     <>
       <BrowserRouter>
-        <Navbar cartItems={cart}/>
+        <Navbar cartItems={cart} />
         <Routes>
-          <Route path='/' element={<Home 
-          products={products}
-          addToCart={addToCart}
-          />} />
-          <Route path='/cart' element={<Cart 
-          cart={cart}
-          removeFromCart={removeFromCart}
-          calculateTotalPrice={calculateTotalPrice}
-          handleQuantityChange={handleQuantityChange}
-          />} />
+          <Route path='/' element={<Home products={products} addToCart={addToCart} />} />
+          <Route path='/cart' element={<Cart cart={cart}
+            removeFromCart={removeFromCart}
+            calculateTotalPrice={calculateTotalPrice} handleQuantityChange={handleQuantityChange} />} />
         </Routes>
       </BrowserRouter>
     </>
